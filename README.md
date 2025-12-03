@@ -84,3 +84,12 @@ The most powerful parameter for visualization is **`display_mode`**:
 * **`display_mode = 1`:** (Simple) Shows only the node labels (e.g., $S_{2,1}$). Ideal for teaching the tree *structure*.
 * **`display_mode = 2`:** (Stock Price) Shows the node label and its corresponding stock price (e.g., $S_{2,1}$ \n $\$96.00$).
 * **`display_mode = 3`:** (Full Price) Shows the node label, stock price, and the calculated option value (e.g., $S_{2,1}: \$96.00$ \n $C_{2,1}: \$5.45$).
+
+## Two-Asset Portfolio Frontier
+Use `portfolio_frontier.py` to visualize the full range of expected returns and standard deviations for two assets as you vary their allocation between 0% and 100%:
+
+```bash
+python portfolio_frontier.py --mu 0.08 0.12 --sigma 0.10 0.18 --correlation 0.25 --points 51 --output frontier.png
+```
+
+The script saves the plot to `frontier.png` (or a custom `--output` path) and optionally shows the figure when `--show` is provided.
